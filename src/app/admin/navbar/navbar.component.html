@@ -1,14 +1,59 @@
-<ul class="nav nav-pills">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="admin/products">Produits</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="admin/providers">Fournisseurs</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="admin/customers">Client</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="admin/statistics">Statistiques</a>
-    </li>
-</ul>
+    <div class="d-flex flex-column p-3 text-bg-dark" style="width: 280px; height: 100%;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <svg class="bi pe-none me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4">Sidebar</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="{{home.path}}" class="nav-link text-white {{home.active}}" aria-current="page">
+                    <i class="bi bi-house-fill"></i>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="{{statistics.path}}" class="nav-link text-white {{statistics.active}}">
+                    <i class="bi bi-speedometer2"></i>
+                    Statistics
+                </a>
+            </li>
+            <li>
+                <a href="{{orders.path}}" class="nav-link text-white {{orders.active}}">
+                    <i class="bi bi-calendar3"></i>
+                    Orders
+                </a>
+            </li>
+            <li>
+                <a href="{{products.path}}" class="nav-link text-white {{products.active}}">
+                    <i class="bi bi-grid"></i>
+                    Products
+                </a>
+            </li>
+            <li>
+                <a href="{{customers.path}}" class="nav-link text-white {{customers.active}}">
+                    <i class="bi bi-people-fill"></i>
+                    Customers
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>mdo</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+
