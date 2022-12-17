@@ -8,7 +8,7 @@ import { RedirectComponent } from './redirect/redirect.component';
 @NgModule({
   declarations: [
     AuthComponent,
-    RedirectComponent
+    RedirectComponent,
   ],
   imports: [
     CommonModule,

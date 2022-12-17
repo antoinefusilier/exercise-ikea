@@ -17,16 +17,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Devis</a>
                 </li>
+                <li class="nav-item">
+
+                </li>
             </ul>
             <span class="navbar-account">
                 <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn dropdown-toggle bg-success opacity-75 text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person-circle"></i> David M. (Cmpt: Client)
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="{{auth.account.path}}">Mon compte</a></li>
+                        <li><a class="dropdown-item" href="{{auth.settings.path}}">Paramètres</a></li>
+                        <li><a class="btn btn-danger" href="{{auth.disconnect.path}}"><i class="bi bi-x-octagon-fill"></i>  Deconnexion</a></li>
                     </ul>
                 </div>
             </span>

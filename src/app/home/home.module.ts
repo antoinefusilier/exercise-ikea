@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RealizationComponent } from './realization/realization.component';
 import { SliderComponent } from './slider/slider.component';
 import { RealizationPreviewComponent } from './realization-preview/realization-preview.component';
-
+// import { AuthModule } from '../auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,12 @@ import { RealizationPreviewComponent } from './realization-preview/realization-p
     NavbarComponent,
     RealizationComponent,
     SliderComponent,
-    RealizationPreviewComponent
+    RealizationPreviewComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    // AuthModule
   ]
 })
 export class HomeModule { }

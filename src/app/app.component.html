@@ -1,3 +1,8 @@
 <!-- <app-server></app-server> -->
 
 <router-outlet></router-outlet>
+<router-outlet name="sahirato-auth"></router-outlet>
+<button [routerLink]="['',{ outlets: {'sahirato-auth': ['auth/sign-in']}}]">
+    auth sign-in
+</button>
+

@@ -6,16 +6,28 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { SahiratoAuthModule } from 'sahirato-auth';
+
+
+// https://angular.io/api/core/NgModule
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent
+    ServerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    SahiratoAuthModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    // AuthComponent
+  ],
+  providers: [
+    // AuthModule
+  ]
+
 })
 export class AppModule { }
