@@ -6,19 +6,20 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 // https://angular.io/api/router/Route
 export const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full'
+  // },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },{
     path: 'auth',
     loadChildren: () => import('lib-auth').then(m => m.LibAuthModule),
-    outlet: 'sahirato-auth'
+    outlet: 'sahiratoAuth'
   },
   {
-    path: 'home',
+    path: '',
     loadChildren: () => import('./home/home.module')
-    .then(m => m.HomeModule)
+    .then(m => m.HomeModule),
   },
   {
     path: 'admin',
@@ -27,7 +28,18 @@ export const routes: Routes = [
     loadChildren: () => import('./admin/admin.module')
     .then(m => m.AdminModule)
   },
-  { path: 'test', loadChildren: () => import('./test/test.module').then(m => m.TestModule) }];
+  {
+    path: 'test',
+    loadChildren: () => import('./test/test.module').then(m => m.TestModule)
+  },
+  {
+    path: 'server',
+    component: ServerComponent,
+    outlet: "serverAdmin",
+
+  },
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

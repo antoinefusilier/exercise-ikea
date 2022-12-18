@@ -2,24 +2,25 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SahiratoAuthComponent } from './sahirato-auth.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 export const SahiratoAuthRoutes: Routes = [
     {
         path: '',
         component: SahiratoAuthComponent,
-        outlet: 'sahirato-auth',
+        outlet: 'sahiratoAuth',
         children: [
             {
                 path: 'sign-in',
                 component: SignInComponent,
-                outlet: 'sahirato-auth',
+                outlet: 'auth',
+
+            },{
+                path: 'sign-up',
+                component: SignUpComponent,
+                outlet: 'auth',
             }
         ]
-    },
-    {
-        path: 'test',
-        component: SignInComponent,
-        outlet: 'sahirato-auth',
     }
 
 

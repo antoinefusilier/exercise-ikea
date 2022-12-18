@@ -1,8 +1,11 @@
 <!-- <app-server></app-server> -->
 
 <router-outlet></router-outlet>
-<router-outlet name="sahirato-auth"></router-outlet>
-<button [routerLink]="['',{ outlets: {'sahirato-auth': ['auth/sign-in']}}]">
+<!-- https://angular.io/api/router/RouterOutlet#description -->
+<router-outlet name="sahiratoAuth"></router-outlet>
+<router-outlet name="serverAdmin"></router-outlet>
+<!-- <a [routerLink]="['/',{outlets: { 'server-admin' : ['server']}}]">Server test outlet</a>
+<button [routerLink]="['',{ outlets: {'sahirato-auth': ['sign-in']}}]">
     auth sign-in
-</button>
+</button> -->
 
