@@ -4,7 +4,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app.module';
 import { Router } from '@angular/router';
-import { SahiratoAuthService } from 'sahirato-auth';
+import { SahiratoAuthService } from 'projects/sahirato-auth/src/public-api';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

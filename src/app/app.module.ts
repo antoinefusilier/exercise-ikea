@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { SahiratoAuthModule } from 'sahirato-auth';
+import { SahiratoAuthModule } from 'projects/sahirato-auth/src/public-api';
 
 
 // https://angular.io/api/core/NgModule

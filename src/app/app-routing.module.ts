@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LibAuthModule } from 'lib-auth';
+// import { LibAuthModule } from 'lib-auth';
+import { SahiratoAuthModule } from 'projects/sahirato-auth/src/public-api';
 import { AppComponent } from './app.component';
 // import { AuthGuard } from './auth.guard';
 import { ServerComponent } from './server/server.component';
@@ -13,7 +14,7 @@ export const routes: Routes = [
   // },
   {
     path: 'auth',
-    loadChildren: () => import('lib-auth').then(m => m.LibAuthModule),
+    loadChildren: () => import('projects/sahirato-auth/src/public-api').then(m => m.SahiratoAuthModule),
     outlet: 'sahiratoAuth'
   },
   {
